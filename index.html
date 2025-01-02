@@ -10,19 +10,21 @@
             padding: 0;
             background-color: black;
             color: white;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             font-family: 'Arial', sans-serif;
+            padding: 2rem;
         }
 
         .content-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 2rem;
+            gap: 3rem;
+            max-width: 800px;
             opacity: 0;
             animation: fadeIn 2s ease-in forwards;
         }
@@ -31,6 +33,16 @@
             max-width: 300px;
             width: 80%;
             height: auto;
+        }
+
+        .teaser-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: center;
+            font-weight: 300;
+            letter-spacing: 0.02em;
+            max-width: 700px;
+            margin: 0 auto;
         }
 
         .splash-text {
@@ -44,11 +56,32 @@
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
+
+        @media (max-width: 600px) {
+            .teaser-text {
+                font-size: 1rem;
+                line-height: 1.6;
+                text-align: left;
+            }
+            
+            .content-container {
+                gap: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="content-container">
         <img src="logo.png" alt="Konofune Logo" class="logo-image">
+        <div class="teaser-text">
+            This is not a story about stars. Those are long forgotten things, ancient beyond description, points-of-light remembered only by a few backwards, deranged passengers, who spin stories for profit or their own escapism.
+            <br><br>
+            No, this is a story about what remains under the vast and lightless sky where stars once dwelt. A Ship, built of providence, and cast, unfinished, into a dark and wicked ocean. A Ship which whispers a promise: that those who believe in its firmament, and wait patiently between its creaking bones, will be delivered to a tomorrow full of flowers and songs.
+            <br><br>
+            But faith, faith in purpose and virtue and mercy, can only linger so long without proof of works. The voice of the Captain grows distant, and those that speak in His absence clutch to dwindling threads of power as false lights flicker. To those without faith, the Ship is a cage, wracked by the throes of death; as its passengers scratch and peck at its vast uncaring walls.
+            <br><br>
+            And how I have longed for a world without walls.
+        </div>
         <div class="splash-text">
             Departure: 2025
         </div>
